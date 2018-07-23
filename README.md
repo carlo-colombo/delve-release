@@ -5,7 +5,7 @@ Bosh release packaging [delve](https://github.com/derekparker/delve), Delve is a
 ### Usage
 
 1. Upload release `bosh upload-release https://github.com/carlo-colombo/delve-release/releases/download/v1/delve-release-1.tgz`
-1. Add job to the instance group where you want to debug a binary
+2. Add job to the instance group where you want to debug a binary
 
 ```
 - type: replace
@@ -20,4 +20,4 @@ Bosh release packaging [delve](https://github.com/derekparker/delve), Delve is a
     release: delve
 ```
 
-1. Delve is available at the location `/var/vcap/packages/delve/bin/dlv` check [delve documentation](https://github.com/derekparker/delve/blob/master/Documentation/usage/README.md)
+3. Delve is available at the location `/var/vcap/packages/delve/bin/dlv` check [delve documentation](https://github.com/derekparker/delve/blob/master/Documentation/usage/README.md)
