@@ -1,0 +1,25 @@
+name: delve
+version: "1"
+commit_hash: 58b69c9
+uncommitted_changes: false
+jobs:
+- name: run-delve
+  version: 83d78ed564d499f27f68dfc854cb0703778afea2
+  fingerprint: 83d78ed564d499f27f68dfc854cb0703778afea2
+  sha1: 260d3e02f164f565156d156008465370c545be37
+packages:
+- name: delve
+  version: a01c173d65cc7638c9f5e72d2ed443f69494af02
+  fingerprint: a01c173d65cc7638c9f5e72d2ed443f69494af02
+  sha1: fe82470f07e303a26aa9655b2af36cf1b59214ec
+  dependencies:
+  - golang-1.10-linux
+- name: golang-1.10-linux
+  version: 84480dd6f6ab2d61546f28c05ed2705c9c642607
+  fingerprint: 84480dd6f6ab2d61546f28c05ed2705c9c642607
+  sha1: 491bd2416037957858a1e0450193f116285a6be7
+  dependencies: []
+license:
+  version: 30fccbc39f8308fa377f8631fc000bd309c2f61b
+  fingerprint: 30fccbc39f8308fa377f8631fc000bd309c2f61b
+  sha1: f28d3946df9b4e4d88298edc612aee3dbb504bc5
