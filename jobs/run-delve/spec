@@ -1,0 +1,17 @@
+---
+name: run-delve
+
+templates:
+  bin/run.erb: bin/run
+
+packages:
+- delve
+
+properties:
+  delve.port:
+    description: Listen port when headless debugging
+    default: 7654
+  delve.binary:
+    description:
+  delve.binary_args:
+    default: []

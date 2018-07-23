@@ -1,0 +1,9 @@
+#!/bin/bash -eu
+source /var/vcap/packages/golang-1.10-linux/bosh/compile.env
+
+mkdir $BOSH_INSTALL_TARGET/bin
+
+mkdir ../src && cp -a * ../src/ && mv ../src ./src
+
+go build -o $BOSH_INSTALL_TARGET/bin/dlv ./src/github.com/derekparker/delve/cmd/dlv/main.go
+

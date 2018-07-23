@@ -1,0 +1,3 @@
+[submodule "src/github.com/derekparker/delve"]
+	path = src/github.com/derekparker/delve
+	url = git@github.com:derekparker/delve.git

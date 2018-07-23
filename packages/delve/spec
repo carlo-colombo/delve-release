@@ -1,0 +1,8 @@
+---
+name: delve
+
+dependencies:
+  - golang-1.10-linux
+
+files:
+  - github.com/derekparker/delve/**/*

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu -o pipefail
+
+/var/vcap/packages/delve/bin/dlv \
+  --headless \
+  --listen "<%= spec.address %>:<%= p('delve.port') %>" \
+  exec <%= p('delve.binary') %> \
+  -- <%= p('delve.binary_args').join(' ') %> "$@"
