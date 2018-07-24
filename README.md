@@ -57,3 +57,24 @@ Unless you are compiling locally your binary, and running `dlv` from that direct
 5. `exit`
 6. Run `docker run -it -v $(pwd):<compiled-binary-path>  delve  /dlv connect <broker-ip>:7654` from the source of your binary. You need to match paths eg `-v /Users/pivotal/workspace/flex-carlo/kafka-example-service-adapter-release:/var/vcap/packages/odb-service-adapter`
 
+
+```
+± cc |master ?:1 ✗| → docker run -it -v $(pwd):/var/vcap/packages/odb-service-adapter  delve  /dlv connect 10.244.0.3:7654
+Type 'help' for list of commands.
+(dlv) b main.main
+Breakpoint 1 set at 0x689198 for main.main() .var/vcap/packages/odb-service-adapter/src/github.com/pivotal-cf-experimental/kafka-example-service-adapter/cmd/service-adapter/main.go:11
+(dlv) c
+> main.main() .var/vcap/packages/odb-service-adapter/src/github.com/pivotal-cf-experimental/kafka-example-service-adapter/cmd/service-adapter/main.go:11 (hits goroutine(1):1 total:1) (PC: 0x689198)
+     6:
+     7:		"github.com/pivotal-cf-experimental/kafka-example-service-adapter/adapter"
+     8:		"github.com/pivotal-cf/on-demand-services-sdk/serviceadapter"
+     9:	)
+    10:
+=>  11:	func main() {
+    12:		topicCreatorCommand := os.Getenv("TOPIC_CREATOR_COMMAND")
+    13:		if topicCreatorCommand == "" {
+    14:			topicCreatorCommand = "/var/vcap/packages/topic_manager/topic_creator"
+    15:		}
+    16:		topicDeleterCommand := os.Getenv("TOPIC_DELETER_COMMAND")
+(dlv)
+```
